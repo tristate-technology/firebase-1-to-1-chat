@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+    <LinearLayout android:orientation="vertical"
+
+                  android:layout_width="match_parent"
+                  android:padding="10dp"
+                  android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:textColor="@color/colorBlack"
+                android:layout_height="wrap_content"/>
+
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tvEmailId"
+                android:layout_width="match_parent"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/colorGrayTitle"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+            android:layout_width="match_parent"
+            android:background="@color/colorGrayTitle"
+            android:layout_height="1dp"/>
+</LinearLayout>
