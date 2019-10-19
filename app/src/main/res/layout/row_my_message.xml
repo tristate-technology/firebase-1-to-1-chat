@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp">
+
+    <RelativeLayout
+            android:id="@+id/rel_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/chat_bubble"
+            android:backgroundTint="@color/colorAccent">
+
+        <LinearLayout
+                android:id="@+id/linear_right_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:clipToPadding="false"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_small">
+
+            <TextView
+                    android:id="@+id/rightTvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="User Name"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/rightTvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="5dp"
+                    android:gravity="right"
+                    android:paddingRight="5dp"
+                    android:text="Sender Message"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/rightTvTimeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="20-04-2016 9:55 PM"
+                    android:textColor="@color/shabbat_text_color"
+                    android:textSize="8sp" />
+        </LinearLayout>
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/rightIvProfileImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/linear_right_chat"
+                android:layout_marginRight="@dimen/margin_medium"
+                app:roundAsCircle="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rel_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginRight="@dimen/margin_very_very_big"
+            android:background="@drawable/chat_bubble_rec"
+            android:backgroundTint="@color/white"
+            android:visibility="gone">
+
+        <LinearLayout
+                android:id="@+id/linear_left_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/leftIvProfileImage"
+                android:clipToPadding="false"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_small">
+
+            <TextView
+                    android:id="@+id/leftTvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="User Name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/leftTvMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="Sender Message"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:id="@+id/leftTvTimeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="20-04-2016 9:55 PM"
+                    android:textColor="@color/shabbat_text_color"
+                    android:textSize="8sp" />
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/leftIvProfileImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="5dp"
+                app:roundAsCircle="true" />
+    </RelativeLayout>
+
+</LinearLayout>

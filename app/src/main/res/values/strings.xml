@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Chat Kotlin</string>
+
+    <!-- change with your facebook api key-->
+
+    <string name="login_title">Login</string>
+    <string name="signup_title">Sign Up</string>
+    <string name="chat_user_title">Chat User</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="send">send</string>
+</resources>

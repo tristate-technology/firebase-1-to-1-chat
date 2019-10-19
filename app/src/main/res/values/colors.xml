@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#6200EE</color>
+<!--    3700B3-->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorAccent">#BB86FC</color>
+
+    <color name="colorGrayTitle">#BBBBBB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="shabbat_text_color">#555555</color>
+    <color name="colorGrayTitle1">#ecebeb</color>
+
+    <color name="senderBgColor">#A3CC79</color>
+    <color name="receiverBgColor">#ffffff</color>
+</resources>
