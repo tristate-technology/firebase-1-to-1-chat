@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -95,15 +94,29 @@ class ChatUserListActivity : AppCompatActivity(), OnItemClickListener {
             override fun onDataChange(p0: DataSnapshot) {
                 progress.visibility = View.GONE
                 groupList?.clear()
+
                 for (data in p0.children) {
-                    Log.e("ChatUserListActivity", "Groups : " + data.key);
-                    var groupModel: GroupModel = GroupModel(
-                        data.child("groupname").value as String,
-                        data.child("users").value as List<User>,
-                        data.child("groupKey").value as String,
-                        data.child("profile").value as String
-                    )
-                    groupList?.add(groupModel)
+                    var users: ArrayList<User> = ArrayList()
+                    for (user in data.child("users").children) {
+                        users.add(
+                            User(
+                                user.child("uid").value as String,
+                                user.child("displayname").value as String,
+                                user.child("email").value as String,
+                                false,
+                                user.child("profile").value as String
+                            )
+                        )
+                    }
+                    if (users.any { it -> it.uid == loggedUser?.uid }) {
+                        var groupModel: GroupModel = GroupModel(
+                            data.child("groupname").value as String,
+                            data.child("users").value as List<User>,
+                            data.child("groupKey").value as String,
+                            data.child("profile").value as String
+                        )
+                        groupList?.add(groupModel)
+                    }
                 }
                 setAdapterForGroups()
             }

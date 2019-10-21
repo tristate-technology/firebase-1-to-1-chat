@@ -7,7 +7,6 @@ data class User(
     var displayname: String,
     val email: String,
     var selected: Boolean = false,
-    val profile: String=""
-) : Serializable {
+    val profile: String = "") : Serializable {
 
 }
