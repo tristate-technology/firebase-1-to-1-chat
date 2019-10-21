@@ -120,7 +120,6 @@ class ChatUserListActivity : AppCompatActivity(), OnItemClickListener {
                 }
                 setAdapterForGroups()
             }
-
         })
 
         usersQuery.addValueEventListener(object : ValueEventListener {
